@@ -1,4 +1,4 @@
-package Module1;
+package Module1.HomeWork;
 
 /**
  * Created by Home on 27.10.2016.
