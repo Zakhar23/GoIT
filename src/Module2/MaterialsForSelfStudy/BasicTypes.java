@@ -10,6 +10,7 @@ public class BasicTypes {
         char q = 21, w = 8;
         System.out.println(q/((double)w));
         //System.out.println(q/w);
+        
 
         // 2
         char n = 99;
