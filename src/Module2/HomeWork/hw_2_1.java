@@ -16,50 +16,44 @@ public class hw_2_1 {
         System.out.println(min(MyArray));
         System.out.println(max(MyArray));
         int maxPositive = maxPositive(MyArray);
-        System.out.println(maxPositive==0 ? "нет позитивных чисел (значение больше 0)" : maxPositive);
+        System.out.println(maxPositive == 0 ? "нет позитивных чисел (значение больше 0)" : maxPositive);
         System.out.println(multiplication(MyArray));
         modulus(MyArray);
         System.out.println(secondLargest(MyArray));
 
     }
 
-    static int secondLargest(int MyArray[])
-    {
+    static int secondLargest(int MyArray[]) {
         Arrays.sort(MyArray);
 
-        int secondLargest = MyArray[MyArray.length-2];
+        int secondLargest = MyArray[MyArray.length - 2];
 
         return secondLargest;
     }
 
-    static void modulus(int MyArray[])
-    {
+    static void modulus(int MyArray[]) {
         int first = MyArray[0];
-        int second = MyArray[MyArray.length-1];
+        int second = MyArray[MyArray.length - 1];
 
-        System.out.println(first < 0 ? first*-1 : first);
-        System.out.println(second < 0 ? second*-1 : second);
+        System.out.println(first < 0 ? first * -1 : first);
+        System.out.println(second < 0 ? second * -1 : second);
 
     }
 
-    static int multiplication(int MyArray[])
-    {
+    static int multiplication(int MyArray[]) {
         int multiplication = 1;
 
-        for (int item: MyArray)
-        {
+        for (int item : MyArray) {
             multiplication *= item;
         }
 
         return multiplication;
     }
 
-    static int maxPositive(int MyArray[])
-    {
+    static int maxPositive(int MyArray[]) {
         int maxPositive = 0;
 
-        for (int item: MyArray)
-        {
+        for (int item : MyArray) {
             if (item > maxPositive)
                 maxPositive = item;
         }
@@ -67,12 +61,10 @@ public class hw_2_1 {
         return maxPositive;
     }
 
-    static int max(int MyArray[])
-    {
+    static int max(int MyArray[]) {
         int max = Integer.MIN_VALUE;
 
-        for (int item: MyArray)
-        {
+        for (int item : MyArray) {
             if (item > max)
                 max = item;
         }
@@ -80,25 +72,21 @@ public class hw_2_1 {
         return max;
     }
 
-    static int min(int MyArray[])
-    {
+    static int min(int MyArray[]) {
         int min = Integer.MAX_VALUE;
 
-        for (int item: MyArray)
-        {
-           if (item < min)
-               min = item;
+        for (int item : MyArray) {
+            if (item < min)
+                min = item;
         }
 
         return min;
     }
 
-    static int sum(int MyArray[])
-    {
+    static int sum(int MyArray[]) {
         int sum = 0;
 
-        for (int item: MyArray)
-        {
+        for (int item : MyArray) {
             sum += item;
         }
 
