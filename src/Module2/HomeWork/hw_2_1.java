@@ -1,5 +1,8 @@
 package Module2.HomeWork;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * Created by kyrychenko on 04.11.2016.
  */
@@ -7,27 +10,24 @@ public class hw_2_1 {
     public static void main(String[] args) {
 
         int[] MyArray = {10, 8, 47, 42, 3, -8, -45, 8, 1, -13};
-        //int[] MyArray = {-10, -8, -47, -42, -3, -8, -45, -8, -1, -13};
+        //int[] MyArray = {-10, -8, -47, -42, -3, -8, -45, -8, -1, -13}; // для теста максимального позитивного
 
-        //System.out.println(sum(MyArray));
-        //System.out.println(min(MyArray));
-        //System.out.println(max(MyArray));
-        //int maxPositive = maxPositive(MyArray);
-        //System.out.println(maxPositive==0 ? "нет позитивных чисел (значение больше 0)" : maxPositive);
-        //System.out.println(multiplication(MyArray));
-        //modulus(MyArray);
+        System.out.println(sum(MyArray));
+        System.out.println(min(MyArray));
+        System.out.println(max(MyArray));
+        int maxPositive = maxPositive(MyArray);
+        System.out.println(maxPositive==0 ? "нет позитивных чисел (значение больше 0)" : maxPositive);
+        System.out.println(multiplication(MyArray));
+        modulus(MyArray);
         System.out.println(secondLargest(MyArray));
 
     }
 
     static int secondLargest(int MyArray[])
     {
-        int secondLargest = 1;
+        Arrays.sort(MyArray);
 
-        for (int item: MyArray)
-        {
-            secondLargest *= item;
-        }
+        int secondLargest = MyArray[MyArray.length-2];
 
         return secondLargest;
     }
