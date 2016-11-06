@@ -3,27 +3,37 @@ package Module2.HomeWork;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-/**
- * Created by kyrychenko on 04.11.2016.
- */
+
 public class hw_2_1 {
     public static void main(String[] args) {
 
-        int[] MyArray = {10, 8, 47, 42, 3, -8, -45, 8, 1, -13};
+        int[] MyArrayInt = {10, 8, 2, 7, 3, -8, -9, 8, 1, -13};
         //int[] MyArray = {-10, -8, -47, -42, -3, -8, -45, -8, -1, -13}; // для теста максимального позитивного
+        double[] MyArrayDouble = {10.0, 8.0, 2.0, 7.0, 3.0, -8.0, -9.0, 8.0, 1.0, -13.0};
 
-        System.out.println(sum(MyArray));
-        System.out.println(min(MyArray));
-        System.out.println(max(MyArray));
-        int maxPositive = maxPositive(MyArray);
-        System.out.println(maxPositive == 0 ? "нет позитивных чисел (значение больше 0)" : maxPositive);
-        System.out.println(multiplication(MyArray));
-        modulus(MyArray);
-        System.out.println(secondLargest(MyArray));
+        System.out.println(sumInt(MyArrayInt));
+        System.out.println(minInt(MyArrayInt));
+        System.out.println(maxInt(MyArrayInt));
+        int maxPositiveInt = maxPositiveInt(MyArrayInt);
+        System.out.println(maxPositiveInt == 0 ? "нет позитивных чисел (значение больше 0)" : maxPositiveInt);
+        System.out.println(multiplicationInt(MyArrayInt));
+        modulusInt(MyArrayInt);
+        System.out.println(secondLargestInt(MyArrayInt));
+
+        System.out.println("=============");
+
+        System.out.println(sumDouble(MyArrayDouble));
+        System.out.println(minDouble(MyArrayDouble));
+        System.out.println(maxDouble(MyArrayDouble));
+        double maxPositiveDouble = maxPositiveDouble(MyArrayDouble);
+        System.out.println(maxPositiveDouble == 0 ? "нет позитивных чисел (значение больше 0)" : maxPositiveDouble);
+        System.out.println(multiplicationDouble(MyArrayDouble));
+        modulusDouble(MyArrayDouble);
+        System.out.println(secondLargestDouble(MyArrayDouble));
 
     }
 
-    static int secondLargest(int MyArray[]) {
+    static int secondLargestInt(int MyArray[]) {
         Arrays.sort(MyArray);
 
         int secondLargest = MyArray[MyArray.length - 2];
@@ -31,7 +41,7 @@ public class hw_2_1 {
         return secondLargest;
     }
 
-    static void modulus(int MyArray[]) {
+    static void modulusInt(int MyArray[]) {
         int first = MyArray[0];
         int second = MyArray[MyArray.length - 1];
 
@@ -40,7 +50,7 @@ public class hw_2_1 {
 
     }
 
-    static int multiplication(int MyArray[]) {
+    static int multiplicationInt(int MyArray[]) {
         int multiplication = 1;
 
         for (int item : MyArray) {
@@ -50,7 +60,7 @@ public class hw_2_1 {
         return multiplication;
     }
 
-    static int maxPositive(int MyArray[]) {
+    static int maxPositiveInt(int MyArray[]) {
         int maxPositive = 0;
 
         for (int item : MyArray) {
@@ -61,7 +71,7 @@ public class hw_2_1 {
         return maxPositive;
     }
 
-    static int max(int MyArray[]) {
+    static int maxInt(int MyArray[]) {
         int max = Integer.MIN_VALUE;
 
         for (int item : MyArray) {
@@ -72,7 +82,7 @@ public class hw_2_1 {
         return max;
     }
 
-    static int min(int MyArray[]) {
+    static int minInt(int MyArray[]) {
         int min = Integer.MAX_VALUE;
 
         for (int item : MyArray) {
@@ -83,7 +93,7 @@ public class hw_2_1 {
         return min;
     }
 
-    static int sum(int MyArray[]) {
+    static int sumInt(int MyArray[]) {
         int sum = 0;
 
         for (int item : MyArray) {
@@ -93,5 +103,75 @@ public class hw_2_1 {
         return sum;
     }
 
+
+    static double secondLargestDouble(double MyArray[]) {
+        Arrays.sort(MyArray);
+
+        double secondLargest = MyArray[MyArray.length - 2];
+
+        return secondLargest;
+    }
+
+    static void modulusDouble(double MyArray[]) {
+        double first = MyArray[0];
+        double second = MyArray[MyArray.length - 1];
+
+        System.out.println(first < 0 ? first * -1 : first);
+        System.out.println(second < 0 ? second * -1 : second);
+
+    }
+
+    static double multiplicationDouble(double MyArray[]) {
+        double multiplication = 1.0;
+
+        for (double item : MyArray) {
+            multiplication *= item;
+        }
+
+        return multiplication;
+    }
+
+    static double maxPositiveDouble(double MyArray[]) {
+        double maxPositive = 0;
+
+        for (double item : MyArray) {
+            if (item > maxPositive)
+                maxPositive = item;
+        }
+
+        return maxPositive;
+    }
+
+    static double maxDouble(double MyArray[]) {
+        double max = Integer.MIN_VALUE;
+
+        for (double item : MyArray) {
+            if (item > max)
+                max = item;
+        }
+
+        return max;
+    }
+
+    static double minDouble(double MyArray[]) {
+        double min = Integer.MAX_VALUE;
+
+        for (double item : MyArray) {
+            if (item < min)
+                min = item;
+        }
+
+        return min;
+    }
+
+    static double sumDouble(double MyArray[]) {
+        double sum = 0;
+
+        for (double item : MyArray) {
+            sum += item;
+        }
+
+        return sum;
+    }
 
 }
