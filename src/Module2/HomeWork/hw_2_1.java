@@ -1,21 +1,29 @@
+/*
+*hw_2_1
+*
+*version 1.0
+*
+*created by Zakhar
+*/
+
 package Module2.HomeWork;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-
 
 public class hw_2_1 {
     public static void main(String[] args) {
 
         int[] MyArrayInt = {10, 8, 2, 7, 3, -8, -9, 8, 1, -13};
-        //int[] MyArray = {-10, -8, -47, -42, -3, -8, -45, -8, -1, -13}; // для теста максимального позитивного
+
         double[] MyArrayDouble = {10.0, 8.0, 2.0, 7.0, 3.0, -8.0, -9.0, 8.0, 1.0, -13.0};
 
         System.out.println(sumInt(MyArrayInt));
         System.out.println(minInt(MyArrayInt));
         System.out.println(maxInt(MyArrayInt));
         int maxPositiveInt = maxPositiveInt(MyArrayInt);
-        System.out.println(maxPositiveInt == 0 ? "нет позитивных чисел (значение больше 0)" : maxPositiveInt);
+        System.out.println(maxPositiveInt == 0
+                ? "нет позитивных чисел (значение больше 0)"
+                : maxPositiveInt);
         System.out.println(multiplicationInt(MyArrayInt));
         modulusInt(MyArrayInt);
         System.out.println(secondLargestInt(MyArrayInt));
@@ -26,7 +34,9 @@ public class hw_2_1 {
         System.out.println(minDouble(MyArrayDouble));
         System.out.println(maxDouble(MyArrayDouble));
         double maxPositiveDouble = maxPositiveDouble(MyArrayDouble);
-        System.out.println(maxPositiveDouble == 0 ? "нет позитивных чисел (значение больше 0)" : maxPositiveDouble);
+        System.out.println(maxPositiveDouble == 0
+                ? "нет позитивных чисел (значение больше 0)"
+                : maxPositiveDouble);
         System.out.println(multiplicationDouble(MyArrayDouble));
         modulusDouble(MyArrayDouble);
         System.out.println(secondLargestDouble(MyArrayDouble));

@@ -1,6 +1,10 @@
-/**
- * Created by Home on 06.11.2016.
- */
+/*
+*hw_2_2
+*
+*version 1.0
+*
+*created by Zakhar
+*/
 
 package Module2.HomeWork;
 
