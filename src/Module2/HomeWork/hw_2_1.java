@@ -14,8 +14,8 @@ public class hw_2_1 {
     public static void main(String[] args) {
 
         int[] MyArrayInt = {10, 8, 2, 7, 3, -8, -9, 8, 1, -13};
-
-        double[] MyArrayDouble = {10.0, 8.0, 2.0, 7.0, 3.0, -8.0, -9.0, 8.0, 1.0, -13.0};
+        System.out.println(Arrays.toString(MyArrayInt));
+        //double[] MyArrayDouble = {10.0, 8.0, 2.0, 7.0, 3.0, -8.0, -9.0, 8.0, 1.0, -13.0};
 
         System.out.println(sumInt(MyArrayInt));
         System.out.println(minInt(MyArrayInt));
@@ -28,9 +28,10 @@ public class hw_2_1 {
         modulusInt(MyArrayInt);
         System.out.println(secondLargestInt(MyArrayInt));
 
+        System.out.println(Arrays.toString(MyArrayInt));
         System.out.println("=============");
 
-        System.out.println(sumDouble(MyArrayDouble));
+        /*System.out.println(sumDouble(MyArrayDouble));
         System.out.println(minDouble(MyArrayDouble));
         System.out.println(maxDouble(MyArrayDouble));
         double maxPositiveDouble = maxPositiveDouble(MyArrayDouble);
@@ -39,14 +40,15 @@ public class hw_2_1 {
                 : maxPositiveDouble);
         System.out.println(multiplicationDouble(MyArrayDouble));
         modulusDouble(MyArrayDouble);
-        System.out.println(secondLargestDouble(MyArrayDouble));
+        System.out.println(secondLargestDouble(MyArrayDouble));*/
 
     }
 
     static int secondLargestInt(int MyArray[]) {
-        Arrays.sort(MyArray);
+        int[] copyArray = Arrays.copyOf(MyArray,MyArray.length);
+        Arrays.sort(copyArray);
 
-        int secondLargest = MyArray[MyArray.length - 2];
+        int secondLargest = copyArray[copyArray.length - 2];
 
         return secondLargest;
     }
