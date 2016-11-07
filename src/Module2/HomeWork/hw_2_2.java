@@ -1,8 +1,9 @@
-package Module2.HomeWork;
-
 /**
  * Created by Home on 06.11.2016.
  */
+
+package Module2.HomeWork;
+
 public class hw_2_2 {
 
     public static void main(String[] args) {
@@ -11,7 +12,6 @@ public class hw_2_2 {
         double Cash = 1000.05;
 
         GetCash(balance, Cash);
-
     }
 
 
