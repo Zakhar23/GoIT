@@ -9,23 +9,23 @@ public class hw_2_3 {
         double withdrawal = 200;
 
         System.out.println(getCash(balances, ownerNames, ownerName, withdrawal));
-     }
+    }
 
     static String getCash(int[] balanses, String[] ownerNames, String ownerName, double withdrawal) {
         double commissions = withdrawal * 0.05;
         int numberOfPerson = 0;
 
-        for (int i = 0; i < ownerNames.length; i++){
-            if (ownerNames[i] == ownerName){
+        for (int i = 0; i < ownerNames.length; i++) {
+            if (ownerNames[i] == ownerName) {
                 numberOfPerson = i;
                 break;
             }
         }
 
-        if ((double)balanses[numberOfPerson] < (withdrawal + commissions)){
+        if ((double) balanses[numberOfPerson] < (withdrawal + commissions)) {
             return ownerName + " NO";
-        }else{
-            return ownerName + " " + (int)withdrawal + " " + (int)((double)balanses[numberOfPerson] - (withdrawal + commissions));
+        } else {
+            return ownerName + " " + (int) withdrawal + " " + (int) ((double) balanses[numberOfPerson] - (withdrawal + commissions));
         }
 
     }
