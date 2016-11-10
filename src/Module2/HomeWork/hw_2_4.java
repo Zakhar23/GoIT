@@ -6,12 +6,12 @@ public class hw_2_4 {
         String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
 
         String ownerName = "Ann";
-        double withdrawal = 200;
+        double rechargeAmount = 200;
 
-        System.out.println(addCash(balances, ownerNames, ownerName, withdrawal));
+        System.out.println(addCash(balances, ownerNames, ownerName, rechargeAmount));
     }
 
-    static String addCash(int[] balanses, String[] ownerNames, String ownerName, double withdrawal) {
+    static String addCash(int[] balanses, String[] ownerNames, String ownerName, double rechargeAmount) {
         int numberOfPerson = 0;
 
         for (int i = 0; i < ownerNames.length; i++) {
@@ -21,7 +21,7 @@ public class hw_2_4 {
             }
         }
 
-        balanses[numberOfPerson] += withdrawal;
-        return ownerName + " " + (int) balanses[numberOfPerson];
+        balanses[numberOfPerson] += rechargeAmount;
+        return ownerName + " " + balanses[numberOfPerson];
     }
 }

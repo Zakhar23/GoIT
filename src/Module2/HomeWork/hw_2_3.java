@@ -25,7 +25,7 @@ public class hw_2_3 {
         if ((double) balanses[numberOfPerson] < (withdrawal + commissions)) {
             return ownerName + " NO";
         } else {
-            return ownerName + " " + (int) withdrawal + " " + (int) ((double) balanses[numberOfPerson] - (withdrawal + commissions));
+            return ownerName + " " + withdrawal + " " + (balanses[numberOfPerson] - (withdrawal + commissions));
         }
 
     }
