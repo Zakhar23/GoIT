@@ -8,6 +8,15 @@ public class User {
     private int salary;
     private String currency;
 
+    public User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency) {
+        this.name = name;
+        this.balance = balance;
+        this.monthsOfEmployment = monthsOfEmployment;
+        this.companyName = companyName;
+        this.salary = salary;
+        this.currency = currency;
+    }
+
     public void paySalary(int salary) {
         this.balance += salary;
         System.out.println(this.balance);
@@ -32,15 +41,6 @@ public class User {
     public void monthIncreaser(int addMonth) {
         this.monthsOfEmployment += addMonth;
         System.out.println(addMonth);
-    }
-
-    public User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency) {
-        this.name = name;
-        this.balance = balance;
-        this.monthsOfEmployment = monthsOfEmployment;
-        this.companyName = companyName;
-        this.salary = salary;
-        this.currency = currency;
     }
 
     public String getName() {

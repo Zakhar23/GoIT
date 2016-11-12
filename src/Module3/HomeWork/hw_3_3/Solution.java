@@ -4,13 +4,11 @@ import java.util.Date;
 
 class Solution {
     public static void main(String[] args) {
-        Date starDate = new Date(20161020);
-
         Course course1 = new Course(6, "Java1", "Jack");
         Course course2 = new Course(5, "Java2", "Sarah");
         Course course3 = new Course(7, "Java3", "Mikel");
-        Course course4 = new Course(starDate, "Java4");
-        Course course5 = new Course(8, "Java5", "Bob");
+        Course course4 = new Course(8, "Java5", "Bob");
+        Course course5 = new Course(new Date(1476991800), "Java5");
 
         Course[] coursesArray = {course1};
 

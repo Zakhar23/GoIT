@@ -13,6 +13,7 @@ public class SpecialStudent extends CollegeStudent {
     }
 
     public SpecialStudent(long secretKey) {
+        super("", "", 0);
         this.secretKey = secretKey;
     }
 
