@@ -17,10 +17,10 @@ class Solution {
 
         CollegeStudent collegeStudent1 = new CollegeStudent("Alex", "Gotem", 2);
         CollegeStudent collegeStudent2 = new CollegeStudent("Haloween", coursesArray);
-        CollegeStudent collegeStudent3 = new CollegeStudent("Bla", 91, 3);
+        CollegeStudent collegeStudent3 = new CollegeStudent("Bla", "blablov", 5, "NAU", 3, 1);
 
         SpecialStudent SpecialStudent1 = new SpecialStudent("Mila", "Gardeeva", 2);
         SpecialStudent SpecialStudent2 = new SpecialStudent("Brave", coursesArray);
-        SpecialStudent SpecialStudent3 = new SpecialStudent(983152645);
+        SpecialStudent SpecialStudent3 = new SpecialStudent("Galia", "Dontre", 2, 983152645);
     }
 }
