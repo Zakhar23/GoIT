@@ -1,4 +1,4 @@
-package Module4.HomeWork.Offline_21_11_2016.First;
+package Module4.Offline_21_11_2016.First;
 
 public interface DAO {
     boolean addWord(String word);

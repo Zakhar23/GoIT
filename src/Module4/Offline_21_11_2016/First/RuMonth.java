@@ -1,9 +1,17 @@
-package Module4.HomeWork.Offline_21_11_2016.First;
+package Module4.Offline_21_11_2016.First;
 
 import java.util.Arrays;
 
-public class RuMonth implements DAO {
+public class RuMonth extends AbstractDAO {
     String[] arrayRu = {"январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"};
+
+    public String[] getArray() {
+        return arrayRu;
+    }
+
+    public void setArray(String[] array) {
+        this.arrayRu = array;
+    }
 
     @Override
     public boolean addWord(String word) {
@@ -29,8 +37,8 @@ public class RuMonth implements DAO {
         return false;
     }
 
-    @Override
-    public String[] getList() {
-        return arrayRu;
-    }
+//    @Override
+//    public String[] getList() {
+//        return arrayRu;
+//    }
 }
