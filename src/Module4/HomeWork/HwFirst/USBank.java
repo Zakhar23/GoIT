@@ -29,7 +29,11 @@ public class USBank extends Bank {
 
     @Override
     int getMonthlyRate() {
-        return 0;
+        if (this.getCurrency() == Currency.EUR) {
+            return 2;
+        } else {
+            return 1;
+        }
     }
 
     @Override
