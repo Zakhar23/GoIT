@@ -1,7 +1,5 @@
 package Module4.HomeWork.HwFirst;
 
-import Module4.HomeWork.HwSecond.Currency;
-
 public class USBank extends Bank {
     public USBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);

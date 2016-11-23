@@ -3,7 +3,7 @@ package Module4.Offline_21_11_2016.First;
 abstract class AbstractDAO implements DAO {
 
     abstract String[] getArray();
-    abstract String[] setArray(String[] array);
+    abstract void setArray(String[] array);
 
     @Override
     public boolean addWord(String word) {

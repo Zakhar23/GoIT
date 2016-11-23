@@ -1,4 +1,4 @@
-package Module4.HomeWork.HwSecond;
+package Module4.HomeWork.HwFirst;
 
 public enum Currency {
     USD,

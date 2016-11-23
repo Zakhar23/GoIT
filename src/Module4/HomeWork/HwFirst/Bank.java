@@ -1,7 +1,5 @@
 package Module4.HomeWork.HwFirst;
 
-import Module4.HomeWork.HwSecond.Currency;
-
 public abstract class Bank {
     private long id;
     private String bankCountry;
