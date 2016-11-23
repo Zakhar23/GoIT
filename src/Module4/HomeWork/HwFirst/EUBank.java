@@ -21,9 +21,9 @@ public class EUBank extends Bank {
     @Override
     int getLimitOfFunding() {
         if (this.getCurrency() == Currency.EUR) {
-            return 2200;
+            return 20000;
         } else if (this.getCurrency() == Currency.USD) {
-            return 2000;
+            return 10000;
         } else {
             return 0;
         }
@@ -33,6 +33,8 @@ public class EUBank extends Bank {
     int getMonthlyRate() {
         if (this.getCurrency() == Currency.EUR) {
             return 1;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 0;
         } else {
             return 0;
         }
@@ -40,7 +42,19 @@ public class EUBank extends Bank {
 
     @Override
     int getCommission(int summ) {
-        return 0;
+        if (this.getCurrency() == Currency.EUR) {
+            if (summ < 1000) {
+                return 2;
+            }
+            return 4;
+        } else if (this.getCurrency() == Currency.USD) {
+            if (summ < 1000) {
+                return 5;
+            }
+            return 7;
+        } else {
+            return 0;
+        }
     }
 
     @Override

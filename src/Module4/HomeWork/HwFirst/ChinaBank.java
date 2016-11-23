@@ -20,21 +20,41 @@ public class ChinaBank extends Bank {
 
     @Override
     int getLimitOfFunding() {
-        return 0;
+        if (this.getCurrency() == Currency.EUR) {
+            return 5000;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 1000;
+        } else {
+            return 0;
+        }
     }
 
     @Override
     int getMonthlyRate() {
         if (this.getCurrency() == Currency.EUR) {
             return 0;
-        } else {
+        } else if (this.getCurrency() == Currency.USD) {
             return 1;
+        } else {
+            return 0;
         }
     }
 
     @Override
     int getCommission(int summ) {
-        return 0;
+        if (this.getCurrency() == Currency.EUR) {
+            if (summ < 1000) {
+                return 10;
+            }
+            return 11;
+        } else if (this.getCurrency() == Currency.USD) {
+            if (summ < 1000) {
+                return 3;
+            }
+            return 5;
+        } else {
+            return 0;
+        }
     }
 
     @Override

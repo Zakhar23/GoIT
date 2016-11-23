@@ -22,6 +22,8 @@ public class USBank extends Bank {
     int getLimitOfFunding() {
         if (this.getCurrency() == Currency.EUR) {
             return 10000;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 0;
         } else {
             return 0;
         }
@@ -31,14 +33,28 @@ public class USBank extends Bank {
     int getMonthlyRate() {
         if (this.getCurrency() == Currency.EUR) {
             return 2;
-        } else {
+        } else if (this.getCurrency() == Currency.USD) {
             return 1;
+        } else {
+            return 0;
         }
     }
 
     @Override
     int getCommission(int summ) {
-        return 0;
+        if (this.getCurrency() == Currency.EUR) {
+            if (summ < 1000) {
+                return 6;
+            }
+            return 8;
+        } else if (this.getCurrency() == Currency.USD) {
+            if (summ < 1000) {
+                return 5;
+            }
+            return 7;
+        } else {
+            return 0;
+        }
     }
 
     @Override
