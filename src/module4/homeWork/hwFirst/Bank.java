@@ -8,8 +8,10 @@ public abstract class Bank {
     private double avrSalaryOfEmployee;
     private long rating;
     private long totalCapital;
+    private String name;
 
-    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+    public Bank(String name, long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+        this.name = name;
         this.id = id;
         this.bankCountry = bankCountry;
         this.currency = currency;
@@ -17,6 +19,11 @@ public abstract class Bank {
         this.avrSalaryOfEmployee = avrSalaryOfEmployee;
         this.rating = rating;
         this.totalCapital = totalCapital;
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 
     abstract int getLimitOfWithdrawal();

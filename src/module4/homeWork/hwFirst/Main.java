@@ -3,12 +3,12 @@ package module4.homeWork.hwFirst;
 public class Main {
     public static void main(String[] args) {
         BankSystemImpl operations = new BankSystemImpl();
-        Bank usBankUSD = new USBank(123456789L, "USA", Currency.USD, 6, 1000, 987654321L, 5000000L);
-        Bank usBankEUR = new USBank(123456799L, "USA", Currency.EUR, 6, 2000, 987654321L, 5000000L);
-        Bank euBankUSD = new EUBank(123456788L, "France", Currency.USD, 8, 1000, 987654321L, 50000L);
-        Bank euBankEUR = new EUBank(123456798L, "France", Currency.EUR, 8, 3000, 987654321L, 50000L);
-        Bank chinaBankUSD = new ChinaBank(123456787L, "China", Currency.USD, 3, 8000, 987654321L, 700000L);
-        Bank chinaBankEUR = new ChinaBank(123456797L, "China", Currency.EUR, 3, 9000, 987654321L, 700000L);
+        Bank usBankUSD = new USBank("USBankUSD", 123456789L, "USA", Currency.USD, 6, 1000, 987654321L, 5000000L);
+        Bank usBankEUR = new USBank("USBankEUR", 123456799L, "USA", Currency.EUR, 6, 2000, 987654321L, 5000000L);
+        Bank euBankUSD = new EUBank("EUBankUSD", 123456788L, "France", Currency.USD, 8, 1000, 987654321L, 50000L);
+        Bank euBankEUR = new EUBank("EUBankEUR", 123456798L, "France", Currency.EUR, 8, 3000, 987654321L, 50000L);
+        Bank chinaBankUSD = new ChinaBank("ChinaBankUSD", 123456787L, "China", Currency.USD, 3, 8000, 987654321L, 700000L);
+        Bank chinaBankEUR = new ChinaBank("ChinaBankEUR", 123456797L, "China", Currency.EUR, 3, 9000, 987654321L, 700000L);
 
         User user1 = new User(4445214L, "Mike", 1100, 4, "BGS", 100, usBankUSD);
         User user2 = new User(4445233L, "Nick", 1000, 4, "BGS", 100, usBankEUR);
