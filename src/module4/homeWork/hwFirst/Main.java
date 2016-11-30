@@ -1,4 +1,4 @@
-package Module4.HomeWork.HwFirst;
+package module4.homeWork.hwFirst;
 
 public class Main {
     public static void main(String[] args) {

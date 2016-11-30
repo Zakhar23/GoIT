@@ -1,16 +1,16 @@
-package Module4.HomeWork.HwFirst;
+package module4.homeWork.hwFirst;
 
-public class USBank extends Bank {
-    public USBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+public class EUBank extends Bank {
+    public EUBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
     @Override
     int getLimitOfWithdrawal() {
         if (this.getCurrency() == Currency.EUR) {
-            return 1200;
+            return 2200;
         } else if (this.getCurrency() == Currency.USD) {
-            return 1000;
+            return 2000;
         } else {
             return 0;
         }
@@ -19,9 +19,9 @@ public class USBank extends Bank {
     @Override
     int getLimitOfFunding() {
         if (this.getCurrency() == Currency.EUR) {
-            return 10000;
+            return 20000;
         } else if (this.getCurrency() == Currency.USD) {
-            return 0;
+            return 10000;
         } else {
             return 0;
         }
@@ -30,9 +30,9 @@ public class USBank extends Bank {
     @Override
     int getMonthlyRate() {
         if (this.getCurrency() == Currency.EUR) {
-            return 2;
-        } else if (this.getCurrency() == Currency.USD) {
             return 1;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 0;
         } else {
             return 0;
         }
@@ -42,9 +42,9 @@ public class USBank extends Bank {
     int getCommission(int summ) {
         if (this.getCurrency() == Currency.EUR) {
             if (summ < 1000) {
-                return 6;
+                return 2;
             }
-            return 8;
+            return 4;
         } else if (this.getCurrency() == Currency.USD) {
             if (summ < 1000) {
                 return 5;
@@ -53,11 +53,6 @@ public class USBank extends Bank {
         } else {
             return 0;
         }
-    }
-
-    @Override
-    double moneyPaidMonthlyForSalary() {
-        return super.moneyPaidMonthlyForSalary();
     }
 
     @Override

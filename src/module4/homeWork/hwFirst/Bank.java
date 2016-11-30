@@ -1,4 +1,4 @@
-package Module4.HomeWork.HwFirst;
+package module4.homeWork.hwFirst;
 
 public abstract class Bank {
     private long id;
@@ -28,7 +28,7 @@ public abstract class Bank {
     abstract int getCommission(int summ);
 
     double moneyPaidMonthlyForSalary() {
-        return 1;
+        return this.avrSalaryOfEmployee;
     }
 
     public long getId() {
