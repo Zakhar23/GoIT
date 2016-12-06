@@ -16,5 +16,6 @@ public class Main {
         square.show();
         square.hide();
         square.hide();
+        square.hide();
     }
 }
