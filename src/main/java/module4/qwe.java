@@ -1,4 +1,4 @@
-package main.java.module4;
+package module4;
 
 /**
  * Created by Home on 20.11.2016.

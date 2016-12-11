@@ -1,4 +1,4 @@
-package main.java.module6;
+package module6;
 
 /**
  * Created by Home on 04.12.2016.

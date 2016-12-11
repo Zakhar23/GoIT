@@ -1,4 +1,4 @@
-package main.java.Module3.HomeWork.hw_3_3;
+package Module3.HomeWork.hw_3_3;
 
 public class CollegeStudent extends Student {
     private String collegeName;

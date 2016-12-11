@@ -1,5 +1,5 @@
 
-package main.java.Module1.HomeWork;
+package Module1.HomeWork;
 
 public class SecondClass {
 

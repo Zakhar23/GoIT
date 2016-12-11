@@ -1,4 +1,4 @@
-package main.java.module6.offline_05_12_2016.first;
+package module6.offline_05_12_2016.first;
 
 import java.util.Random;
 

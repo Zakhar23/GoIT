@@ -1,4 +1,4 @@
-package main.java.module5.offline_26_11_2016.second;
+package module5.offline_26_11_2016.second;
 
 /**
  * Created by Home on 28.11.2016.

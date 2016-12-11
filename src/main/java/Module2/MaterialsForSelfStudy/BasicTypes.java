@@ -1,4 +1,4 @@
-package main.java.Module2.MaterialsForSelfStudy;
+package Module2.MaterialsForSelfStudy;
 
 /**
  * Created by Home on 31.10.2016.

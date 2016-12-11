@@ -1,4 +1,4 @@
-package main.java.module6.offline_05_12_2016.second;
+package module6.offline_05_12_2016.second;
 
 public class Main {
     public static void main(String[] args) {

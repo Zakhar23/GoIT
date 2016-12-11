@@ -1,4 +1,4 @@
-package main.java.Module2.Offline_07_11_2016;
+package Module2.Offline_07_11_2016;
 
 
 public class Ex_1_CountOfNumber {

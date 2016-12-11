@@ -1,4 +1,4 @@
-package main.java.module6.homework;
+package module6.homework;
 
 /**
  * Created by Home on 04.12.2016.

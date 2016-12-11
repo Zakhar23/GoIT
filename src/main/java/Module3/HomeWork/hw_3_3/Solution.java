@@ -1,4 +1,4 @@
-package main.java.Module3.HomeWork.hw_3_3;
+package Module3.HomeWork.hw_3_3;
 
 import java.util.Date;
 

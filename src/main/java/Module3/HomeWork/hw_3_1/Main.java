@@ -1,4 +1,4 @@
-package main.java.Module3.HomeWork.hw_3_1;
+package Module3.HomeWork.hw_3_1;
 
 public class Main {
     public static void main(String[] args) {

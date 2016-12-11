@@ -1,4 +1,4 @@
-package main.java.module4.homeWork.hwFirst;
+package module4.homeWork.hwFirst;
 
 public interface BankSystem {
     void withdrawOfUser(User user, int amount);

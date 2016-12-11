@@ -1,4 +1,4 @@
-package main.java.Module3.HomeWork.hw_3_4;
+package Module3.HomeWork.hw_3_4;
 
 public class User {
     private String name;

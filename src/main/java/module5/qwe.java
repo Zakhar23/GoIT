@@ -1,4 +1,4 @@
-package main.java.module5;
+package module5;
 
 /**
  * Created by Home on 28.11.2016.

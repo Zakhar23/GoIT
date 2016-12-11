@@ -1,4 +1,4 @@
-package main.java.Module2.HomeWork;
+package Module2.HomeWork;
 
 public class hw_2_4 {
     public static void main(String[] args) {

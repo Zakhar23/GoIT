@@ -1,4 +1,4 @@
-package main.java.Module1.offline1_29102016;
+package Module1.offline1_29102016;
 
 import java.util.Arrays;
 

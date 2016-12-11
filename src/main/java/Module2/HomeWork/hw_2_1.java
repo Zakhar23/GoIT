@@ -1,5 +1,5 @@
 
-package main.java.Module2.HomeWork;
+package Module2.HomeWork;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package main.java.module4.homeWork.hwFirst;
+package module4.homeWork.hwFirst;
 
 public class EUBank extends Bank {
     public EUBank(String name, long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
