@@ -1,4 +1,4 @@
-package module4.homeWork.hwFirst;
+package module4.homework.hwFirst;
 
 public class USBank extends Bank {
     public USBank(String name, long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {

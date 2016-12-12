@@ -1,4 +1,4 @@
-package module3.homeWork.hw_3_3;
+package module3.homework.hw_3_3;
 
 public class SpecialStudent extends CollegeStudent {
     private long secretKey;

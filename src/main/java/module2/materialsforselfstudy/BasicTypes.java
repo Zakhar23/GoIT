@@ -1,4 +1,4 @@
-package module2.materialsForSelfStudy;
+package module2.materialsforselfstudy;
 
 /**
  * Created by Home on 31.10.2016.

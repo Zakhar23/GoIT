@@ -10,7 +10,7 @@ public class Main {
         }
         //System.out.println(users);
 
-        Collections.sort(users, new Comparator<User>() {
+        users.sort(new Comparator<User>() {
             @Override
             public int compare(User o1, User o2) {
                 int compare = (o1.secondName + o1.name).compareTo(o1.secondName + o1.name);
@@ -18,6 +18,17 @@ public class Main {
             }
         });
 
-        //users.
+        List<User> users21 = new ArrayList<>();
+
+        for (int j = 0; j < users.size(); j++) {
+            if (users.get(j).age > 21) {
+                users21.add(users.get(j));
+            }
+        }
+
+        //users.stream().filter()
+
+        System.out.println(users.size());
+        System.out.println(users21.size());
     }
 }
