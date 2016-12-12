@@ -30,5 +30,7 @@ public class Main {
 
         System.out.println(users.size());
         System.out.println(users21.size());
+
+        System.out.println(System.currentTimeMillis());
     }
 }
