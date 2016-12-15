@@ -1,4 +1,4 @@
-package module4.homework.hwFirst;
+package module4.homework.first;
 
 public class User {
     private long id;

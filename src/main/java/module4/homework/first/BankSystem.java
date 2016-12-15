@@ -1,4 +1,4 @@
-package module4.homework.hwFirst;
+package module4.homework.first;
 
 public interface BankSystem {
     void withdrawOfUser(User user, int amount);

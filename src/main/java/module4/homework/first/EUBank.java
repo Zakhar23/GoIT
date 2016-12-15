@@ -1,16 +1,16 @@
-package module4.homework.hwFirst;
+package module4.homework.first;
 
-public class ChinaBank extends Bank {
-    public ChinaBank(String name, long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+public class EUBank extends Bank {
+    public EUBank(String name, long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(name, id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 
     @Override
     int getLimitOfWithdrawal() {
         if (this.getCurrency() == Currency.EUR) {
-            return 150;
+            return 2200;
         } else if (this.getCurrency() == Currency.USD) {
-            return 100;
+            return 2000;
         } else {
             return 0;
         }
@@ -19,9 +19,9 @@ public class ChinaBank extends Bank {
     @Override
     int getLimitOfFunding() {
         if (this.getCurrency() == Currency.EUR) {
-            return 5000;
+            return 20000;
         } else if (this.getCurrency() == Currency.USD) {
-            return 1000;
+            return 10000;
         } else {
             return 0;
         }
@@ -30,9 +30,9 @@ public class ChinaBank extends Bank {
     @Override
     int getMonthlyRate() {
         if (this.getCurrency() == Currency.EUR) {
-            return 0;
-        } else if (this.getCurrency() == Currency.USD) {
             return 1;
+        } else if (this.getCurrency() == Currency.USD) {
+            return 0;
         } else {
             return 0;
         }
@@ -42,14 +42,14 @@ public class ChinaBank extends Bank {
     int getCommission(int summ) {
         if (this.getCurrency() == Currency.EUR) {
             if (summ < 1000) {
-                return 10;
+                return 2;
             }
-            return 11;
+            return 4;
         } else if (this.getCurrency() == Currency.USD) {
             if (summ < 1000) {
-                return 3;
+                return 5;
             }
-            return 5;
+            return 7;
         } else {
             return 0;
         }

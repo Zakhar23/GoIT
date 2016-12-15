@@ -1,4 +1,4 @@
-package module4.homework.hwFirst;
+package module4.homework.first;
 
 public enum Currency {
     USD,
