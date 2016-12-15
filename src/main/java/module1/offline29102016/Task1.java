@@ -1,10 +1,7 @@
-package module1.offline1_29102016;
+package module1.offline29102016;
 
 import java.util.Arrays;
 
-/**
- * Created by Home on 29.10.2016.
- */
 public class Task1 {
     public static void main(String[] args) {
         int[] balances = {100,5400,4321,900,-50,0};

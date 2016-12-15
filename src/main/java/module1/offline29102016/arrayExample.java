@@ -1,9 +1,6 @@
-package module1.offline1_29102016;
+package module1.offline29102016;
 
-/**
- * Created by Home on 29.10.2016.
- */
-public class ArrayExample {
+public class arrayExample {
     public static void main(String[] args) {
 
         int[] array = {1,50,41,9};
@@ -22,8 +19,8 @@ public class ArrayExample {
             index --;
         }
 
-        for(int i = 0; i< array1.length;i++){
-            System.out.println(array1[i]);
+        for (int anArray1 : array1) {
+            System.out.println(anArray1);
         }
 
         System.out.println("==============");

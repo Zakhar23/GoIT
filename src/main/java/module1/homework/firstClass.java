@@ -1,7 +1,7 @@
 
 package module1.homework;
 
-public class FirstClass {
+public class firstClass {
 
     public static void main(String[] args) {
         System.out.println("Мой первый класс на Java");

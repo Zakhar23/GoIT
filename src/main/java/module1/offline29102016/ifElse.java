@@ -1,9 +1,6 @@
-package module1.offline1_29102016;
+package module1.offline29102016;
 
-/**
- * Created by Home on 29.10.2016.
- */
-public class IfElse {
+public class ifElse {
     public static void main(String[] args) {
         boolean isActive = true;
 
