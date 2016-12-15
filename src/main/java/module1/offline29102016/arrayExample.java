@@ -3,7 +3,7 @@ package module1.offline29102016;
 public class arrayExample {
     public static void main(String[] args) {
 
-        int[] array = {1,50,41,9};
+        int[] array = {1, 50, 41, 9};
 
         int[] array1 = new int[5];
         array1[4] = 10;
@@ -11,12 +11,12 @@ public class arrayExample {
         //System.out.println(Arrays.toString(array1));
 
         //циклы
-        int index = array.length-1;
-        while (index>=0){
+        int index = array.length - 1;
+        while (index >= 0) {
 
             //System.out.println(array[index]);
 
-            index --;
+            index--;
         }
 
         for (int anArray1 : array1) {
@@ -25,7 +25,7 @@ public class arrayExample {
 
         System.out.println("==============");
 
-        for (int item : array1){
+        for (int item : array1) {
             System.out.println(item);
         }
 
