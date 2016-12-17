@@ -1,9 +1,12 @@
 package module3.offline14112016.ex2trianglemy;
 
 public class Triangle {
-    private Point a, b, c;
-    private double ab, ac, bc;
-    //http://ru.onlinemschool.com/math/library/analytic_geometry/point_point_length/
+    private Point a;
+    private Point b;
+    private Point c;
+    private double ab;
+    private double ac;
+    private double bc;
 
     public Triangle(Point aa, Point bb, Point cc) {
         double abCheck = getLengthOfLine(aa, bb);
