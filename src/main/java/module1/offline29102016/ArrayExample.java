@@ -1,6 +1,6 @@
 package module1.offline29102016;
 
-public class arrayExample {
+public class ArrayExample {
     public static void main(String[] args) {
 
         int[] array = {1, 50, 41, 9};
