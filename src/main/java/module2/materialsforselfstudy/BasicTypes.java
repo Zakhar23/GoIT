@@ -4,7 +4,8 @@ public class BasicTypes {
     public static void main(String[] args) {
 
         // 1
-        char q = 21, w = 8;
+        char q = 21;
+        char w = 8;
         System.out.println(q / ((double) w));
         //System.out.println(q/w);
 
