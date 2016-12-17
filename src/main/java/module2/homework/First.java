@@ -36,17 +36,15 @@ public class First {
 
     }
 
-    static int secondLargest(int[] myArray) {
+    private static int secondLargest(int[] myArray) {
 
         int[] copyArray = Arrays.copyOf(myArray, myArray.length);
         Arrays.sort(copyArray);
 
-        int secondLargest = copyArray[copyArray.length - 2];
-
-        return secondLargest;
+        return copyArray[copyArray.length - 2];
     }
 
-    static void modulus(int[] myArray) {
+    private static void modulus(int[] myArray) {
 
         int first = myArray[0];
         int second = myArray[myArray.length - 1];
@@ -56,7 +54,7 @@ public class First {
 
     }
 
-    static int multiplication(int[] myArray) {
+    private static int multiplication(int[] myArray) {
         int multiplication = 1;
 
         for (int item : myArray) {
@@ -66,7 +64,7 @@ public class First {
         return multiplication;
     }
 
-    static int maxPositive(int[] myArray) {
+    private static int maxPositive(int[] myArray) {
         int maxPositive = 0;
 
         for (int item : myArray) {
@@ -78,7 +76,7 @@ public class First {
         return maxPositive;
     }
 
-    static int max(int[] myArray) {
+    private static int max(int[] myArray) {
         int max = Integer.MIN_VALUE;
 
         for (int item : myArray) {
@@ -90,7 +88,7 @@ public class First {
         return max;
     }
 
-    static int min(int[] myArray) {
+    private static int min(int[] myArray) {
         int min = Integer.MAX_VALUE;
 
         for (int item : myArray) {
@@ -102,7 +100,7 @@ public class First {
         return min;
     }
 
-    static int sum(int[] myArray) {
+    private static int sum(int[] myArray) {
         int sum = 0;
 
         for (int item : myArray) {
@@ -113,17 +111,15 @@ public class First {
     }
 
 
-    static double secondLargest(double[] myArray) {
+    private static double secondLargest(double[] myArray) {
 
         double[] copyArray = Arrays.copyOf(myArray, myArray.length);
         Arrays.sort(copyArray);
 
-        double secondLargest = copyArray[copyArray.length - 2];
-
-        return secondLargest;
+        return copyArray[copyArray.length - 2];
     }
 
-    static void modulus(double[] myArray) {
+    private static void modulus(double[] myArray) {
 
         double first = myArray[0];
         double second = myArray[myArray.length - 1];
@@ -133,7 +129,7 @@ public class First {
 
     }
 
-    static double multiplication(double[] myArray) {
+    private static double multiplication(double[] myArray) {
         double multiplication = 1.0;
 
         for (double item : myArray) {
@@ -143,7 +139,7 @@ public class First {
         return multiplication;
     }
 
-    static double maxPositive(double[] myArray) {
+    private static double maxPositive(double[] myArray) {
         double maxPositive = 0;
 
         for (double item : myArray) {
@@ -155,7 +151,7 @@ public class First {
         return maxPositive;
     }
 
-    static double max(double[] myArray) {
+    private static double max(double[] myArray) {
         double max = Integer.MIN_VALUE;
 
         for (double item : myArray) {
@@ -168,7 +164,7 @@ public class First {
         return max;
     }
 
-    static double min(double[] myArray) {
+    private static double min(double[] myArray) {
         double min = Integer.MAX_VALUE;
 
         for (double item : myArray) {
@@ -180,7 +176,7 @@ public class First {
         return min;
     }
 
-    static double sum(double[] myArray) {
+    private static double sum(double[] myArray) {
         double sum = 0;
 
         for (double item : myArray) {

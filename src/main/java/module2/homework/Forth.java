@@ -11,11 +11,11 @@ public class Forth {
         System.out.println(addCash(balances, ownerNames, ownerName, rechargeAmount));
     }
 
-    static String addCash(int[] balanses, String[] ownerNames, String ownerName, double rechargeAmount) {
+    private static String addCash(int[] balanses, String[] ownerNames, String ownerName, double rechargeAmount) {
         int numberOfPerson = 0;
 
         for (int i = 0; i < ownerNames.length; i++) {
-            if (ownerNames[i] == ownerName) {
+            if (ownerNames[i].equals(ownerName)) {
                 numberOfPerson = i;
                 break;
             }

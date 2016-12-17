@@ -12,7 +12,7 @@ public class Second {
     }
 
 
-    static void getCash(double balance, double sum) {
+    private static void getCash(double balance, double sum) {
 
         double commissions = sum * 0.05;
 

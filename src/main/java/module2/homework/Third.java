@@ -11,12 +11,12 @@ public class Third {
         System.out.println(getCash(balances, ownerNames, ownerName, withdrawal));
     }
 
-    static String getCash(int[] balanses, String[] ownerNames, String ownerName, double withdrawal) {
+    private static String getCash(int[] balanses, String[] ownerNames, String ownerName, double withdrawal) {
         double commissions = withdrawal * 0.05;
         int numberOfPerson = 0;
 
         for (int i = 0; i < ownerNames.length; i++) {
-            if (ownerNames[i] == ownerName) {
+            if (ownerNames[i].equals(ownerName)) {
                 numberOfPerson = i;
                 break;
             }
