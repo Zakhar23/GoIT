@@ -5,28 +5,28 @@ public class Ex1CountOfNumber {
     public static void main(String[] args) {
 
         int[] array = {10, 15, 23, 10, 10, 78, 95, 1, 2, 8, 6, 12, 10};
-        int nn = 10;
-        int kk = countOfN(nn, array);
+        int n = 10;
+        int k = countOfN(n, array);
 
-        if (kk == 0) {
+        if (k == 0) {
             System.out.println("no");
-        } else if (kk == 1) {
+        } else if (k == 1) {
             System.out.println("yes");
         } else {
-            System.out.println(kk);
+            System.out.println(k);
         }
     }
 
-    private static int countOfN(int n, int[] array) {
+    private static int countOfN(int nn, int[] array) {
 
-        int kk = 0;
+        int k = 0;
 
         for (int item : array) {
-            if (item == n)
-                kk++;
+            if (item == nn)
+                k++;
         }
 
-        return kk;
+        return k;
     }
 
 
