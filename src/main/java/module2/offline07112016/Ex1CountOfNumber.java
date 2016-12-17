@@ -22,8 +22,9 @@ public class Ex1CountOfNumber {
         int k = 0;
 
         for (int item : array) {
-            if (item == nn)
+            if (item == nn) {
                 k++;
+            }
         }
 
         return k;

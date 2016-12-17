@@ -16,12 +16,12 @@ public class Ex4ArrayInArray {
         //System.out.println(Arrays.toString(arrayMatrix));
     }
 
-    static int[] createMatrix(int n) {
-        int[] newArray = new int[n];
+    static int[] createMatrix(int value) {
+        int[] newArray = new int[value];
 
         Random number = new Random();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < value; i++) {
             newArray[i] = number.nextInt(100);
         }
 

@@ -22,24 +22,24 @@ public class Ex4ArrayInArrayZerkaloNew {
         //System.out.println(Arrays.toString(arrayMatrix));
     }
 
-    static int[] createMatrix(int n) {
-        int[] newArray = new int[n];
+    static int[] createMatrix(int value) {
+        int[] newArray = new int[value];
 
         Random number = new Random();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < value; i++) {
             newArray[i] = number.nextInt(100);
         }
 
         return newArray;
     }
 
-    static int[] createMatrixZ(int n) {
-        int[] newArray = new int[n];
+    static int[] createMatrixZ(int value) {
+        int[] newArray = new int[value];
 
         Random number = new Random();
 
-        for (int i = n; i > 0; i--) {
+        for (int i = value; i > 0; i--) {
             newArray[i] = number.nextInt(100);
         }
 

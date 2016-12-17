@@ -21,17 +21,17 @@ public class Ex3factorial {
 
     }
 
-    private static void factorial(int j, int k) {
+    private static void factorial(int jj, int kk) {
 
-        if (k == 1) {
-            System.out.println(j);
+        if (kk == 1) {
+            System.out.println(jj);
             return;
         }
 
-        j *= k;
-        k--;
+        jj *= kk;
+        kk--;
 
-        factorial(j, k);
+        factorial(jj, kk);
 
     }
 }
