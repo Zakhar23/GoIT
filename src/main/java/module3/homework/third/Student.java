@@ -1,4 +1,4 @@
-package module3.homework.Third;
+package module3.homework.third;
 
 public class Student {
     private String firstName;

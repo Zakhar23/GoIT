@@ -1,14 +1,14 @@
-package module3.offline14112016.ex2triangle_my;
+package module3.offline14112016.ex2trianglemy;
 
 public class Triangle {
     private Point a, b, c;
     private double ab, ac, bc;
     //http://ru.onlinemschool.com/math/library/analytic_geometry/point_point_length/
 
-    public Triangle(Point a, Point b, Point c) {
-        double abCheck = getLengthOfLine(a, b);
-        double acCheck = getLengthOfLine(a, c);
-        double bcCheck = getLengthOfLine(b, c);
+    public Triangle(Point aa, Point bb, Point cc) {
+        double abCheck = getLengthOfLine(aa, bb);
+        double acCheck = getLengthOfLine(aa, cc);
+        double bcCheck = getLengthOfLine(bb, cc);
 
         if ((abCheck >= acCheck + bcCheck) || (acCheck >= abCheck + bcCheck) || (bcCheck >= abCheck + acCheck)) {
             System.out.println("Получился не треугольник: " +
@@ -16,17 +16,17 @@ public class Triangle {
             return;
         }
 
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        this.a = aa;
+        this.b = bb;
+        this.c = cc;
         this.ab = abCheck;
         this.ac = acCheck;
         this.bc = bcCheck;
     }
 
-    private double getLengthOfLine(Point a, Point b) {
+    private double getLengthOfLine(Point aa, Point bb) {
         //AB = √(xb - xa)2 + (yb - ya)2
-        return Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2));
+        return Math.sqrt(Math.pow(bb.x - aa.x, 2) + Math.pow(bb.y - aa.y, 2));
     }
 
     public void print() {

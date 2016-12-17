@@ -1,4 +1,4 @@
-package module3.homework.Forth;
+package module3.homework.forth;
 
 public class User {
     private String name;

@@ -1,4 +1,4 @@
-package module3.offline14112016.ex2triangle_my;
+package module3.offline14112016.ex2trianglemy;
 
 public class Main {
     public static void main(String[] args) {

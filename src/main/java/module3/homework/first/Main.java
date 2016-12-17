@@ -1,4 +1,4 @@
-package module3.homework.First;
+package module3.homework.first;
 
 public class Main {
     public static void main(String[] args) {
