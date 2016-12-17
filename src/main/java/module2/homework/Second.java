@@ -17,7 +17,8 @@ public class Second {
         double commissions = sum * 0.05;
 
         if (sum + commissions < balance) {
-            System.out.println("Успешно! Операция на сумму " + (sum + commissions) + " грн. Остаток: " + (balance - (sum + commissions)));
+            System.out.println("Успешно! Операция на сумму " + (sum + commissions) + " грн. Остаток: "
+                    + (balance - (sum + commissions)));
         } else {
             System.out.println("Операция отклонена, не достаточный баланс!");
         }

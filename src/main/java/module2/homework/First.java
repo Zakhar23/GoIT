@@ -44,10 +44,28 @@ public class First {
         return copyArray[copyArray.length - 2];
     }
 
+    private static double secondLargest(double[] myArray) {
+
+        double[] copyArray = Arrays.copyOf(myArray, myArray.length);
+        Arrays.sort(copyArray);
+
+        return copyArray[copyArray.length - 2];
+    }
+
     private static void modulus(int[] myArray) {
 
         int first = myArray[0];
         int second = myArray[myArray.length - 1];
+
+        System.out.println(first < 0 ? first * -1 : first);
+        System.out.println(second < 0 ? second * -1 : second);
+
+    }
+
+    private static void modulus(double[] myArray) {
+
+        double first = myArray[0];
+        double second = myArray[myArray.length - 1];
 
         System.out.println(first < 0 ? first * -1 : first);
         System.out.println(second < 0 ? second * -1 : second);
@@ -64,10 +82,32 @@ public class First {
         return multiplication;
     }
 
+    private static double multiplication(double[] myArray) {
+        double multiplication = 1.0;
+
+        for (double item : myArray) {
+            multiplication *= item;
+        }
+
+        return multiplication;
+    }
+
     private static int maxPositive(int[] myArray) {
         int maxPositive = 0;
 
         for (int item : myArray) {
+            if (item > maxPositive) {
+                maxPositive = item;
+            }
+        }
+
+        return maxPositive;
+    }
+
+    private static double maxPositive(double[] myArray) {
+        double maxPositive = 0;
+
+        for (double item : myArray) {
             if (item > maxPositive) {
                 maxPositive = item;
             }
@@ -88,10 +128,35 @@ public class First {
         return max;
     }
 
+    private static double max(double[] myArray) {
+        double max = Integer.MIN_VALUE;
+
+        for (double item : myArray) {
+            if (item > max) {
+                max = item;
+            }
+
+        }
+
+        return max;
+    }
+
     private static int min(int[] myArray) {
         int min = Integer.MAX_VALUE;
 
         for (int item : myArray) {
+            if (item < min) {
+                min = item;
+            }
+        }
+
+        return min;
+    }
+
+    private static double min(double[] myArray) {
+        double min = Integer.MAX_VALUE;
+
+        for (double item : myArray) {
             if (item < min) {
                 min = item;
             }
@@ -108,72 +173,6 @@ public class First {
         }
 
         return sum;
-    }
-
-
-    private static double secondLargest(double[] myArray) {
-
-        double[] copyArray = Arrays.copyOf(myArray, myArray.length);
-        Arrays.sort(copyArray);
-
-        return copyArray[copyArray.length - 2];
-    }
-
-    private static void modulus(double[] myArray) {
-
-        double first = myArray[0];
-        double second = myArray[myArray.length - 1];
-
-        System.out.println(first < 0 ? first * -1 : first);
-        System.out.println(second < 0 ? second * -1 : second);
-
-    }
-
-    private static double multiplication(double[] myArray) {
-        double multiplication = 1.0;
-
-        for (double item : myArray) {
-            multiplication *= item;
-        }
-
-        return multiplication;
-    }
-
-    private static double maxPositive(double[] myArray) {
-        double maxPositive = 0;
-
-        for (double item : myArray) {
-            if (item > maxPositive) {
-                maxPositive = item;
-            }
-        }
-
-        return maxPositive;
-    }
-
-    private static double max(double[] myArray) {
-        double max = Integer.MIN_VALUE;
-
-        for (double item : myArray) {
-            if (item > max) {
-                max = item;
-            }
-
-        }
-
-        return max;
-    }
-
-    private static double min(double[] myArray) {
-        double min = Integer.MAX_VALUE;
-
-        for (double item : myArray) {
-            if (item < min) {
-                min = item;
-            }
-        }
-
-        return min;
     }
 
     private static double sum(double[] myArray) {
