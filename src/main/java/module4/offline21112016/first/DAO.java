@@ -1,4 +1,4 @@
-package module4.offline_21_11_2016.first;
+package module4.offline21112016.first;
 
 public interface DAO {
     boolean addWord(String word);

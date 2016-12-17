@@ -1,4 +1,4 @@
-package module7.offline_12_12_2016.first;
+package module7.offline12122016.first;
 
 import java.util.*;
 

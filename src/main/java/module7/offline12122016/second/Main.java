@@ -1,4 +1,4 @@
-package module7.offline_12_12_2016.second;
+package module7.offline12122016.second;
 
 public class Main {
     public static void main(String[] args) {
