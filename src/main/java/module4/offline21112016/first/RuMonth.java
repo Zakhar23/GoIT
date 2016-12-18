@@ -3,8 +3,8 @@ package module4.offline21112016.first;
 import java.util.Arrays;
 
 public class RuMonth extends AbstractDAO {
-    String[] arrayRu = {"январь","февраль","март","апрель","май","июнь",
-            "июль","август","сентябрь","октябрь","ноябрь","декабрь"};
+    String[] arrayRu = {"январь", "февраль", "март", "апрель", "май", "июнь",
+            "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"};
 
     public String[] getArray() {
         return arrayRu;
@@ -16,7 +16,7 @@ public class RuMonth extends AbstractDAO {
 
     @Override
     public boolean addWord(String word) {
-        arrayRu = Arrays.copyOf(arrayRu,arrayRu.length + 1);
+        arrayRu = Arrays.copyOf(arrayRu, arrayRu.length + 1);
         arrayRu[arrayRu.length - 1] = word;
 
         return true;
