@@ -1,6 +1,6 @@
 package module7.offline12122016.first;
 
-public class User implements Comparable<User>{
+public class User implements Comparable<User> {
     String name;
     String secondName;
     int age;
@@ -12,7 +12,7 @@ public class User implements Comparable<User>{
     }
 
     @Override
-    public int compareTo(User o) {
-        return age - o.age;
+    public int compareTo(User oo) {
+        return age - oo.age;
     }
 }
