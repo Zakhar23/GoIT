@@ -10,8 +10,8 @@ public abstract class Bank {
     private long totalCapital;
     private String name;
 
-    public Bank(String name, long id, String bankCountry, Currency currency
-            , int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+    public Bank(String name, long id, String bankCountry, Currency currency,
+                int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         this.name = name;
         this.id = id;
         this.bankCountry = bankCountry;

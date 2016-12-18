@@ -3,6 +3,7 @@ package module4.offline21112016.first;
 abstract class AbstractDAO implements DAO {
 
     abstract String[] getArray();
+
     abstract void setArray(String[] array);
 
     @Override

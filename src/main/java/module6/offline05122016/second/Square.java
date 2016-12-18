@@ -1,4 +1,4 @@
-package module6.offline_05_12_2016.second;
+package module6.offline05122016.second;
 
 public class Square extends View {
     private static int countView;

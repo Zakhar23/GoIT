@@ -1,4 +1,4 @@
-package module6.offline_05_12_2016.first;
+package module6.offline05122016.first;
 
 import java.util.Arrays;
 
