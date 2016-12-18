@@ -1,4 +1,4 @@
-package module3.offline14112016.ex3Person;
+package module3.offline14112016.ex3person;
 
 public class Employee extends Person {
     private String address;
