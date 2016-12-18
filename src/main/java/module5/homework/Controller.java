@@ -3,7 +3,7 @@ package module5.homework;
 import java.util.Arrays;
 
 public class Controller {
-    API apis[] = new API[3];
+    API[] apis = new API[3];
 
     public Controller(API[] apis) {
         this.apis = apis;

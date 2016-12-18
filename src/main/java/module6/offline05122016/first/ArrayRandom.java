@@ -2,7 +2,7 @@ package module6.offline05122016.first;
 
 import java.util.Random;
 
-public class qwerty {
+public class ArrayRandom {
     static int[] getArray20int(int a, int b) {
         int[] arrayInt = new int[20];
         Random random = new Random();

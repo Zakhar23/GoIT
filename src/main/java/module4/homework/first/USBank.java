@@ -1,7 +1,8 @@
 package module4.homework.first;
 
 public class USBank extends Bank {
-    public USBank(String name, long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+    public USBank(String name, long id, String bankCountry, Currency currency,
+                  int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(name, id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
     }
 

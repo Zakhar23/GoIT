@@ -20,16 +20,16 @@ public class Room {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) {
+    public boolean equals(Object oo) {
+        if (this == oo) {
             return true;
         }
 
-        if (o == null || getClass() != o.getClass()) {
+        if (oo == null || getClass() != oo.getClass()) {
             return false;
         }
 
-        Room room = (Room) o;
+        Room room = (Room) oo;
 
         if (price != room.price) {
             return false;

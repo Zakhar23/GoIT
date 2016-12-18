@@ -7,7 +7,7 @@ public class Main {
         int a = 5;
         int b = 100;
 
-        int[] ar = qwerty.getArray20int(a, b);
+        int[] ar = ArrayRandom.getArray20int(a, b);
         System.out.println(Arrays.toString(ar));
 
         System.out.println("=========");
@@ -15,7 +15,7 @@ public class Main {
         int[] arrayInt = new int[20];
 
         for (int k = 0; k < arrayInt.length; k++) {
-            arrayInt[k] = qwerty.get20int(a, b);
+            arrayInt[k] = ArrayRandom.get20int(a, b);
         }
 
         System.out.println(Arrays.toString(arrayInt));
