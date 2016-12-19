@@ -3,6 +3,7 @@ package module4.offline21112016.first;
 import java.util.Arrays;
 
 public class RuMonth extends AbstractDAO {
+
     private String[] arrayRu = {"январь", "февраль", "март", "апрель", "май", "июнь",
             "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"};
 
