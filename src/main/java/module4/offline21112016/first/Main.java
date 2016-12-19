@@ -13,15 +13,19 @@ public class Main {
             case "russian":
                 dao = getRuMonth();
                 monthToAdd = "габриель";
+                break;
             case "american":
                 dao = getUsaMonth();
                 monthToAdd = "gabriel";
+                break;
             case "ukrainian":
                 dao = getUkrMonth();
                 monthToAdd = "габр";
+                break;
             default:
                 dao = getRuMonth();
                 monthToAdd = "габриель";
+                break;
         }
 
         System.out.println("getList");
