@@ -10,18 +10,18 @@ public class Main {
         String monthToAdd = null;
 
         switch (user) {
-        case "russian":
-            dao = getRuMonth();
-            monthToAdd = "габриель";
-        case "american":
-            dao = getUsaMonth();
-            monthToAdd = "gabriel";
-        case "ukrainian":
-            dao = getUkrMonth();
-            monthToAdd = "габр";
-        default:
-            dao = getRuMonth();
-            monthToAdd = "габриель";
+            case "russian":
+                dao = getRuMonth();
+                monthToAdd = "габриель";
+            case "american":
+                dao = getUsaMonth();
+                monthToAdd = "gabriel";
+            case "ukrainian":
+                dao = getUkrMonth();
+                monthToAdd = "габр";
+            default:
+                dao = getRuMonth();
+                monthToAdd = "габриель";
         }
 
         System.out.println("getList");
