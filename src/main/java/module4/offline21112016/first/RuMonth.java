@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class RuMonth extends AbstractDAO {
     private String[] arrayRu = {"январь", "февраль", "март", "апрель", "май", "июнь",
-            "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"};
+        "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"};
 
     @Override
     public boolean addWord(String word) {
