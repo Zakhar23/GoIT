@@ -10,19 +10,20 @@ public class Main {
         String monthToAdd = null;
 
         switch (user) {
-            case "russian":
-                dao = getRuMonth();
-                monthToAdd = "габриель";
-            case "american":
-                dao = getUsaMonth();
-                monthToAdd = "gabriel";
-            case "ukrainian":
-                dao = getUkrMonth();
-                monthToAdd = "габр";
-            default:
-                dao = getRuMonth();
-                monthToAdd = "габриель";
+        case "russian":
+            dao = getRuMonth();
+            monthToAdd = "габриель";
+        case "american":
+            dao = getUsaMonth();
+            monthToAdd = "gabriel";
+        case "ukrainian":
+            dao = getUkrMonth();
+            monthToAdd = "габр";
+        default:
+            dao = getRuMonth();
+            monthToAdd = "габриель";
         }
+
         System.out.println("getList");
         System.out.println(Arrays.toString(dao.getList()));
         System.out.println();
@@ -30,7 +31,6 @@ public class Main {
         System.out.println("addMonth");
         dao.addWord(monthToAdd);
         System.out.println(Arrays.toString(dao.getList()));
-
 
     }
 
