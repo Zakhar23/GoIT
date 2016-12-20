@@ -19,5 +19,12 @@ public class Main {
         System.out.println(Arrays.toString(myArrayInt));
 
         System.out.println("=============");
+
+        User[] users = new User[3];
+        users[0] = new User(123456L, "Cavin", "Block", 50, 300);
+        users[1] = new User(123456L, "Cavin", "Block", 50, 300);
+        users[2] = new User(123456L, "Cavin", "Block", 50, 300);
+
+
     }
 }
