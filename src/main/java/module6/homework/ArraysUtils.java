@@ -11,14 +11,16 @@ final public class ArraysUtils {
         return copyArray[copyArray.length - 2];
     }
 
-    static void modulus(int[] myArray) {
+    static int[] modulus(int[] myArray) {
 
         int first = myArray[0];
         int second = myArray[myArray.length - 1];
 
-        System.out.println(first < 0 ? first * -1 : first);
-        System.out.println(second < 0 ? second * -1 : second);
+        int[] answer = new int[2];
+        answer[0] = (first < 0 ? first * -1 : first);
+        answer[1] = (second < 0 ? second * -1 : second);
 
+        return answer;
     }
 
     static int multiplication(int[] myArray) {
@@ -78,10 +80,20 @@ final public class ArraysUtils {
     }
 
     static int[] reverse(int[] array) {
-        return new int[0];
+        int[] reverse = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            reverse[array.length-1-i] = array[i];
+        }
+        return reverse;
     }
 
     static int[] findEvenElements(int[] array) {
-        return new int[0];
+        int[] answer = new int[array.length];
+        int count = 0;
+        for (int i = 0; i < array.length; i = i + 2) {
+            answer[count] = array[i + 1];
+            count++;
+        }
+        return answer;
     }
 }
