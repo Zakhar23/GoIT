@@ -17,8 +17,12 @@ public class User {
 
     @Override
     public boolean equals(Object ob) {
-        if (this == ob) return true;
-        if (!(ob instanceof User)) return false;
+        if (this == ob) {
+            return true;
+        }
+        if (!(ob instanceof User)) {
+            return false;
+        }
 
         User user = (User) ob;
 
