@@ -2,7 +2,7 @@ package module6.homework;
 
 import java.util.Arrays;
 
-final public class ArraysUtils {
+final class ArraysUtils {
     static int secondLargest(int[] myArray) {
 
         int[] copyArray = Arrays.copyOf(myArray, myArray.length);
@@ -82,7 +82,7 @@ final public class ArraysUtils {
     static int[] reverse(int[] array) {
         int[] reverse = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            reverse[array.length-1-i] = array[i];
+            reverse[array.length - 1 - i] = array[i];
         }
         return reverse;
     }

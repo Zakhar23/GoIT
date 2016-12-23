@@ -2,8 +2,8 @@ package module6.homework;
 
 import java.util.Arrays;
 
-public class UserUtils {
-    static public User[] uniqueUsers(User[] users) {
+final class UserUtils {
+    static User[] uniqueUsers(User[] users) {
         User[] unic = new User[1];
         unic[0] = users[0];
 
@@ -51,9 +51,19 @@ public class UserUtils {
         return id;
     }
 
-    /*static User[] deleteEmptyUsers(User[] users) {
+    static User[] deleteEmptyUsers(User[] users) {
         for (int i = 0; i < users.length; i++) {
-            if (users[i].id == 0)
+            if (users[i].id == 0) {
+                for (int j = i; j < users.length; j++) {
+                    if ((j + 1) >= users.length) {
+                        break;
+                    }
+                    users[j] = users[j + 1];
+                }
+                users = Arrays.copyOfRange(users, 0, users.length - 1);
+            }
+
         }
-    }*/
+        return users;
+    }
 }
