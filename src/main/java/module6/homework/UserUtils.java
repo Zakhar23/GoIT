@@ -25,21 +25,35 @@ public class UserUtils {
         return unic;
     }
 
-    //users are equal when all their field are equal
     static User[] usersWithContitionalBalance(User[] users, int balance) {
-        return new User[0];
+        User[] unic = new User[0];
+        for (User user : users) {
+            if (user.balance == balance) {
+                unic = Arrays.copyOf(unic, unic.length + 1);
+                unic[unic.length - 1] = user;
+            }
+        }
+        return unic;
     }
 
-    //user’s balance == balance
-    public User[] paySalaryToUsers(User[] users) {
-        return new User[0];
+    static User[] paySalaryToUsers(User[] users) {
+        for (User user : users) {
+            user.balance = user.balance + user.salary;
+        }
+        return users;
     }
 
     static long[] getUsersId(User[] users) {
-        return new long[0];
+        long[] id = new long[users.length];
+        for (int i = 0; i < users.length; i++) {
+            id[i] = users[i].id;
+        }
+        return id;
     }
 
-    static User[] deleteEmptyUsers(User[] users) {
-        return new User[0];
-    }
+    /*static User[] deleteEmptyUsers(User[] users) {
+        for (int i = 0; i < users.length; i++) {
+            if (users[i].id == 0)
+        }
+    }*/
 }

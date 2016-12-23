@@ -27,9 +27,12 @@ public class Main {
         User[] users = new User[3];
         users[0] = new User(123456L, "Cavin", "Block", 50, 300);
         users[1] = new User(123456L, "Cavin", "Block", 50, 300);
-        users[2] = new User(123456L, "Cavin", "Block", 50, 300);
+        users[2] = new User(123456L, "Joe", "Block", 50, 1500);
 
-        System.out.println(Arrays.toString(UserUtils.uniqueUsers(users)));
-
+        //System.out.println(Arrays.toString(UserUtils.uniqueUsers(users)));
+        //System.out.println(Arrays.toString(UserUtils.usersWithContitionalBalance(users, 300)));
+        //System.out.println(Arrays.toString(UserUtils.paySalaryToUsers(users)));
+        //System.out.println(Arrays.toString(UserUtils.getUsersId(users)));
+        int k = 1;
     }
 }
