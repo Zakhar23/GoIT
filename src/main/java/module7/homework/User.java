@@ -55,15 +55,6 @@ public class User implements Comparable {
         this.balance = balance;
     }
 
-    /*@Override
-    public int compareTo(User user) {
-        if (city.equals(user.getCity())) {
-            return 1;
-        } else {
-            return 2;
-        }
-    }*/
-
     @Override
     public int compareTo(Object o) {
         return 0;
