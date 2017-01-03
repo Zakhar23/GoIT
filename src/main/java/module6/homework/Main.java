@@ -13,8 +13,8 @@ public class Main {
         System.out.println(ArraysUtils.max(myArrayInt));
         int maxPositiveInt = ArraysUtils.maxPositive(myArrayInt);
         System.out.println(maxPositiveInt == 0
-                ? "нет позитивных чисел (значение больше 0)"
-                : maxPositiveInt);
+            ? "нет позитивных чисел (значение больше 0)"
+            : maxPositiveInt);
         System.out.println(ArraysUtils.multiplication(myArrayInt));
         System.out.println(Arrays.toString(ArraysUtils.modulus(myArrayInt)));
         System.out.println(ArraysUtils.secondLargest(myArrayInt));
@@ -22,7 +22,7 @@ public class Main {
         System.out.println(Arrays.toString(ArraysUtils.reverse(myArrayInt)));
         System.out.println(Arrays.toString(ArraysUtils.findEvenElements(myArrayInt)));
 
-        System.out.println("=============");
+        System.out.println("====================================");
 
         User[] users = new User[4];
         users[0] = new User(123456L, "Cavin", "Block", 50, 300);

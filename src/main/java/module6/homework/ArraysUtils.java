@@ -2,9 +2,8 @@ package module6.homework;
 
 import java.util.Arrays;
 
-final class ArraysUtils {
+public final class ArraysUtils {
     static int secondLargest(int[] myArray) {
-
         int[] copyArray = Arrays.copyOf(myArray, myArray.length);
         Arrays.sort(copyArray);
 
@@ -12,7 +11,6 @@ final class ArraysUtils {
     }
 
     static int[] modulus(int[] myArray) {
-
         int first = myArray[0];
         int second = myArray[myArray.length - 1];
 
@@ -90,9 +88,11 @@ final class ArraysUtils {
     static int[] findEvenElements(int[] array) {
         int[] answer = new int[array.length];
         int count = 0;
-        for (int i = 0; i < array.length; i = i + 2) {
-            answer[count] = array[i + 1];
-            count++;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                answer[count] = array[i];
+                count++;
+            }
         }
         return answer;
     }
