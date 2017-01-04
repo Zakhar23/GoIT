@@ -3,7 +3,7 @@ package module5.homework;
 public class DAOimpl implements DAO {
     @Override
     public Room save(Room room) {
-        return null;
+        return room;
     }
 
     @Override
@@ -13,7 +13,7 @@ public class DAOimpl implements DAO {
 
     @Override
     public Room update(Room room) {
-        return null;
+        return room;
     }
 
     @Override
