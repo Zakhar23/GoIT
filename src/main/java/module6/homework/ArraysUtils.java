@@ -86,7 +86,14 @@ public final class ArraysUtils {
     }
 
     static int[] findEvenElements(int[] array) {
-        int[] answer = new int[array.length];
+        int arrayCount = 0;
+        for (int j : array) {
+            if (j % 2 == 0) {
+                arrayCount++;
+            }
+        }
+
+        int[] answer = new int[arrayCount];
         int count = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
