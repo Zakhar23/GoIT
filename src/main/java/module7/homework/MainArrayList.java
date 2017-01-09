@@ -38,10 +38,10 @@ public class MainArrayList {
         orders.sort(new Comparator<Order>() {
             @Override
             public int compare(Order order1, Order order2) {
-                if (order1.price == order2.price) {
-                    return order1.user.getCity().compareTo(order2.user.getCity());
+                if (order1.getPrice() == order2.getPrice()) {
+                    return order1.getUser().getCity().compareTo(order2.getUser().getCity());
                 }
-                return order1.price - order2.price;
+                return order1.getPrice() - order2.getPrice();
             }
         });
 
@@ -49,13 +49,13 @@ public class MainArrayList {
         orders.sort(new Comparator<Order>() {
             @Override
             public int compare(Order order1, Order order2) {
-                if (order1.itemName.compareTo(order2.itemName) == 0) {
-                    if (order1.id == order2.id) {
-                        return order1.user.getCity().compareTo(order2.user.getCity());
+                if (order1.getItemName().compareTo(order2.getItemName()) == 0) {
+                    if (order1.getId() == order2.getId()) {
+                        return order1.getUser().getCity().compareTo(order2.getUser().getCity());
                     }
-                    return (int) (order2.id - order1.id);
+                    return (int) (order2.getId() - order1.getId());
                 }
-                return order1.itemName.compareTo(order2.itemName);
+                return order1.getItemName().compareTo(order2.getItemName());
             }
         });
 
