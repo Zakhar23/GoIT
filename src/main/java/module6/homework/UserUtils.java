@@ -26,11 +26,19 @@ final class UserUtils {
     }
 
     static User[] usersWithContitionalBalance(User[] users, int balance) {
-        User[] unic = new User[0];
+        int count = 0;
         for (User user : users) {
-            if (user.balance == balance) {
-                unic = Arrays.copyOf(unic, unic.length + 1);
-                unic[unic.length - 1] = user;
+            if (user.getBalance() == balance) {
+                count++;
+            }
+        }
+
+        User[] unic = new User[count];
+        int index = 0;
+        for (User user : users) {
+            if (user.getBalance() == balance) {
+                unic[index] = user;
+                index++;
             }
         }
         return unic;
@@ -38,7 +46,7 @@ final class UserUtils {
 
     static User[] paySalaryToUsers(User[] users) {
         for (User user : users) {
-            user.balance = user.balance + user.salary;
+            user.setBalance(user.getBalance() + user.getSalary());
         }
         return users;
     }
@@ -46,14 +54,14 @@ final class UserUtils {
     static long[] getUsersId(User[] users) {
         long[] id = new long[users.length];
         for (int i = 0; i < users.length; i++) {
-            id[i] = users[i].id;
+            id[i] = users[i].getId();
         }
         return id;
     }
 
     static User[] deleteEmptyUsers(User[] users) {
         for (int i = 0; i < users.length; i++) {
-            if (users[i].id == 0) {
+            if (users[i].getId() == 0) {
                 for (int j = i; j < users.length; j++) {
                     if ((j + 1) >= users.length) {
                         break;
@@ -62,7 +70,6 @@ final class UserUtils {
                 }
                 users = Arrays.copyOfRange(users, 0, users.length - 1);
             }
-
         }
         return users;
     }
