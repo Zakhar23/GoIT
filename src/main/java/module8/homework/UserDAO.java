@@ -2,39 +2,55 @@ package module8.homework;
 
 import java.util.List;
 
-public class UserDAO<T> extends AbstractDAOImpl<T> {
-    @Override
-    public T save(T t) {
-        return super.save(t);
+public class UserDAO extends AbstractDAOImpl {
+    public User save(User user) {
+        super.save(user);
+        return user;
     }
 
-    @Override
-    public void delete(T t) {
-        super.delete(t);
+    public void delete(User user) {
+        List<User> list = getList();
+        for (User item : list) {
+            if (item.equals(user)) {
+                list.remove(item);
+            }
+        }
+        setList(list);
     }
 
-    @Override
-    public void deleteAll(List T) {
-        super.deleteAll(T);
+    public void deleteAll(List list) {
+        super.deleteAll(list);
     }
 
-    @Override
-    public void saveAll(List T) {
-        super.saveAll(T);
+    public void saveAll(List list) {
+        super.saveAll(list);
     }
 
-    @Override
-    public List<T> getList() {
+    public List getList() {
         return super.getList();
     }
 
-    @Override
     public void deleteByld(long id) {
-        super.deleteByld(id);
+        List<User> list = getList();
+        for (User item : list) {
+            if (item.getId() == id) {
+                list.remove(item);
+            }
+        }
+        setList(list);
     }
 
-    @Override
-    public T get(long id) {
-        return super.get(id);
+    public User get(long id) {
+        List<User> list = getList();
+        for (User item : list) {
+            if (item.getId() == id) {
+                return item;
+            }
+        }
+        return null;
+    }
+
+    public void setList(List list) {
+        super.setList(list);
     }
 }

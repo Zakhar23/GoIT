@@ -19,12 +19,14 @@ public class AbstractDAOImpl<T> implements AbstractDAO<T> {
 
     @Override
     public void deleteAll(List T) {
-
+        list = new ArrayList<T>();
     }
 
     @Override
     public void saveAll(List T) {
-
+        for (Object item : T) {
+            list.add((T) item);
+        }
     }
 
     @Override
