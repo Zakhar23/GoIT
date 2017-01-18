@@ -1,7 +1,5 @@
 package module8.homework;
 
-import module7.homework.*;
-
 public class Main {
     public static void main(String[] args) {
         User user1 = new User(3424L, "Oleg");
