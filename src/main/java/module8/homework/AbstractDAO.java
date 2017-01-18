@@ -3,13 +3,13 @@ package module8.homework;
 import java.util.List;
 
 public interface AbstractDAO<T> {
-    T save(T t);
+    T save(T obj);
 
-    void delete(T t);
+    void delete(T obj);
 
-    void deleteAll(List T);
+    void deleteAll(List list);
 
-    void saveAll(List T);
+    void saveAll(List list);
 
     List<T> getList();
 

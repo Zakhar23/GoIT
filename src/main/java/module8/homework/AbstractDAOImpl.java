@@ -7,24 +7,24 @@ public class AbstractDAOImpl<T> implements AbstractDAO<T> {
     private List<T> list = new ArrayList<T>();
 
     @Override
-    public T save(T t) {
-        list.add(t);
-        return t;
+    public T save(T obj) {
+        list.add(obj);
+        return obj;
     }
 
     @Override
-    public void delete(T t) {
+    public void delete(T obj) {
 
     }
 
     @Override
-    public void deleteAll(List T) {
+    public void deleteAll(List listT) {
         list = new ArrayList<T>();
     }
 
     @Override
-    public void saveAll(List T) {
-        for (Object item : T) {
+    public void saveAll(List somelist) {
+        for (Object item : somelist) {
             list.add((T) item);
         }
     }
