@@ -7,13 +7,13 @@ public interface AbstractDAO<T> {
 
     void delete(T obj);
 
-    void deleteAll(List list);
+    void deleteAll(List<T> list);
 
-    void saveAll(List list);
+    void saveAll(List<T> list);
 
     List<T> getList();
 
-    void deleteByld(long id);
+    void deleteById(long id);
 
     T get(long id);
 }

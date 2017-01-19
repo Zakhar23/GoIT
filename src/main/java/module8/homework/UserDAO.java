@@ -1,21 +1,15 @@
 package module8.homework;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO extends AbstractDAOImpl {
     public User save(User user) {
-        super.save(user);
-        return user;
+        return (User) super.save(user);
     }
 
     public void delete(User user) {
-        List<User> list = getList();
-        for (User item : list) {
-            if (item.equals(user)) {
-                list.remove(item);
-            }
-        }
-        setList(list);
+        super.delete(user);
     }
 
     public void deleteAll(List list) {
@@ -30,14 +24,15 @@ public class UserDAO extends AbstractDAOImpl {
         return super.getList();
     }
 
-    public void deleteByld(long id) {
+    public void deleteById(long id) {
         List<User> list = getList();
+        List<User> listDel = new ArrayList<>();
         for (User item : list) {
             if (item.getId() == id) {
-                list.remove(item);
+                listDel.add(item);
             }
         }
-        setList(list);
+        super.deleteAll(listDel);
     }
 
     public User get(long id) {

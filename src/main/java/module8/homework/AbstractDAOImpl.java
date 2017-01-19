@@ -14,19 +14,21 @@ public class AbstractDAOImpl<T> implements AbstractDAO<T> {
 
     @Override
     public void delete(T obj) {
-
-    }
-
-    @Override
-    public void deleteAll(List listT) {
-        list = new ArrayList<T>();
-    }
-
-    @Override
-    public void saveAll(List somelist) {
-        for (Object item : somelist) {
-            list.add((T) item);
+        for (T item : list) {
+            if (item.equals(obj)) {
+                list.remove(item);
+            }
         }
+    }
+
+    @Override
+    public void deleteAll(List<T> somelist) {
+        list.removeAll(somelist);
+    }
+
+    @Override
+    public void saveAll(List<T> somelist) {
+        list.addAll(somelist);
     }
 
     @Override
@@ -35,7 +37,7 @@ public class AbstractDAOImpl<T> implements AbstractDAO<T> {
     }
 
     @Override
-    public void deleteByld(long id) {
+    public void deleteById(long id) {
 
     }
 
