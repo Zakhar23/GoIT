@@ -1,4 +1,4 @@
-package module8.offline26122016.task1;
+package module8.offline26122016;
 
 public class Circle extends Shape {
     private final int radiuse;

@@ -1,4 +1,4 @@
-package module8.offline26122016.task1;
+package module8.offline26122016;
 
 public class Rectangle extends Shape {
     private int width;
@@ -28,6 +28,6 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return "Rectangle:" + super.toString () + ", width " + width + ", height " + height;
+        return "Rectangle:" + super.toString() + ", width " + width + ", height " + height;
     }
 }

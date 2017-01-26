@@ -1,6 +1,5 @@
-package module8.offline26122016.task1;
+package module8.offline26122016;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class UseShapes {
@@ -11,18 +10,18 @@ public class UseShapes {
         Rectangle rectangle2 = new Rectangle(new Point(p1, p2), 3, 5);
         Rectangle rectangle3 = new Rectangle(new Point(p1, p2), 3, 5);
 
-        Circle circle1 = new Circle (new Point (p1, p2), 5);
+        Circle circle1 = new Circle(new Point(p1, p2), 5);
 
         Group group = new Group();
 
         group.add(rectangle1);
-        group.add (circle1);
+        group.add(circle1);
 
         //System.out.println(group.getListFigure());
 
         List<Shape> all = group.getListFigure();
         for (Shape shape : all) {
-            System.out.println (shape);
+            System.out.println(shape);
         }
     }
 }

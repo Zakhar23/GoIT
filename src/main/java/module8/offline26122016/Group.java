@@ -1,4 +1,4 @@
-package module8.offline26122016.task1;
+package module8.offline26122016;
 
 import java.util.ArrayList;
 import java.util.List;

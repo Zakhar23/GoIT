@@ -1,4 +1,4 @@
-package module8.offline26122016.task1;
+package module8.offline26122016;
 
 abstract public class Shape {
     private Point startPoint;
@@ -9,6 +9,6 @@ abstract public class Shape {
 
     @Override
     public String toString() {
-        return "P{" + startPoint.getXx () + " " + startPoint.getYy () + "}";
+        return "P{" + startPoint.getXx() + " " + startPoint.getYy() + "}";
     }
 }
