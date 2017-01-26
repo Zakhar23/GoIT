@@ -3,6 +3,7 @@ package module7.homework;
 import module4.homework.first.Currency;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MainTreeSet {
     public static void main(String[] args) {
@@ -27,27 +28,20 @@ public class MainTreeSet {
         orders.add(new Order(16789, 190, Currency.EUR, "lux", "qwe", user7));
         orders.add(new Order(16789, 205, Currency.EUR, "lux", "qwe", user8));
         orders.add(new Order(16789, 510, Currency.EUR, "king", "qwe", user9));
-        orders.add(new Order(16789, 510, Currency.EUR, "king", "qwe", user9));
+        orders.add(new Order(16789, 510, Currency.EUR, "king", "qwe", user10));
 
-        System.out.println(orders.first());
+        //выведите заказ с наибольшей ценой
+        System.out.println(orders.stream().max((Comparator.comparingInt(Order::getPrice))).get());
 
-        boolean itContaine = false;
-        for (Order elem : orders) {
-            if (elem.getUser().getLastName().equals("Petrov")) {
-                itContaine = true;
-            }
-        }
-        System.out.println(itContaine);
+        //проверьте, содержит ли сет заказ, где фамилия пользователя - “Petrov”
+        System.out.println(orders.stream().anyMatch(p -> p.getUser().getLastName().equals("Petrov")));
 
-        List<Order> toDel = new ArrayList<>();
-        for (Order order : orders) {
-            if (order.getCurrency() == Currency.USD) {
-                toDel.add(order);
-            }
-        }
-        orders.removeAll(toDel);
-
+        //удалите заказы c USD
+        orders.removeIf(p -> p.getCurrency().equals(Currency.USD));
         orders.forEach(System.out::println);
+        //or
+        //List<Order> listWithOurUSD = orders.stream().filter(p->p.getCurrency() != Currency.USD).collect(Collectors.toList());
+        //listWithOurUSD.forEach(System.out::println);
 
     }
 
