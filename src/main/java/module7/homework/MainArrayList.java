@@ -5,6 +5,7 @@ import module4.homework.first.Currency;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MainArrayList {
     public static void main(String[] args) {
@@ -20,45 +21,37 @@ public class MainArrayList {
         User user10 = new User(1234L, "Rick", "Russ", "Kiev", 50000);
 
         List<Order> orders = new ArrayList<>();
-        orders.add(new Order(56789, 200, Currency.USD, "lux", "qwe", user1));
+        orders.add(new Order(56788, 200, Currency.USD, "lux", "qwe", user1));
         orders.add(new Order(56789, 100, Currency.USD, "standart", "qwe", user2));
         orders.add(new Order(56789, 150, Currency.USD, "lux", "qwe", user3));
         orders.add(new Order(56789, 200, Currency.USD, "norm", "qwe", user4));
         orders.add(new Order(16789, 300, Currency.USD, "standart", "qwe", user5));
         orders.add(new Order(16789, 200, Currency.USD, "king", "qwe", user6));
         orders.add(new Order(16789, 190, Currency.USD, "lux", "qwe", user7));
-        orders.add(new Order(16789, 205, Currency.USD, "lux", "qwe", user8));
+        orders.add(new Order(16788, 205, Currency.USD, "lux", "qwe", user8));
         orders.add(new Order(16789, 510, Currency.USD, "king", "qwe", user9));
         orders.add(new Order(16789, 400, Currency.USD, "norm", "qwe", user10));
 
         //за ценой заказа по убыванию
-        orders.sort(Order::compareTo);
+        orders = orders.stream().sorted().collect(Collectors.toList());
+
+        //за ценой заказа по возростанию
+        orders = orders.stream().sorted(Comparator.comparingInt(Order::getPrice)).collect(Collectors.toList());
 
         //за ценой заказа по возрастанию и за городом пользователя
-        orders.sort(new Comparator<Order>() {
-            @Override
-            public int compare(Order order1, Order order2) {
-                if (order1.getPrice() == order2.getPrice()) {
-                    return order1.getUser().getCity().compareTo(order2.getUser().getCity());
-                }
-                return order1.getPrice() - order2.getPrice();
-            }
-        });
+        orders = orders.stream().sorted(((o1, o2) -> o1.getPrice() != o2.getPrice()
+                ? Integer.compare(o1.getPrice(), o2.getPrice())
+                : o1.getUser().getCity().compareTo(o2.getUser().getCity()))).collect(Collectors.toList());
 
         //за наименованием и идентификатором заказа, и городом пользователя
-        orders.sort(new Comparator<Order>() {
-            @Override
-            public int compare(Order order1, Order order2) {
-                if (order1.getItemName().compareTo(order2.getItemName()) == 0) {
-                    if (order1.getId() == order2.getId()) {
-                        return order1.getUser().getCity().compareTo(order2.getUser().getCity());
-                    }
-                    return (int) (order2.getId() - order1.getId());
-                }
-                return order1.getItemName().compareTo(order2.getItemName());
-            }
-        });
+        orders = orders.stream().sorted(((o1, o2) -> !o1.getItemName().equals(o2.getItemName())
+                ? o1.getItemName().compareTo(o2.getItemName())
+                : (o1.getId() != o2.getId()
+                ? Long.compare(o1.getId(), o2.getId())
+                : o1.getUser().getCity().compareTo(o2.getUser().getCity())))).collect(Collectors.toList());
 
+        //вывод результата
+        orders.forEach(System.out::println);
 
     }
 }

@@ -71,4 +71,9 @@ public class Order implements Comparable<Order> {
     public void setUser(User user) {
         this.user = user;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" + itemName + "," + id + "," + price + "," + user.getCity() + "}";
+    }
 }
