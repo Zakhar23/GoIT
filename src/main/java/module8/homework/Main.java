@@ -16,8 +16,8 @@ public class Main {
         abstractDAO.save(user3);
         System.out.println(abstractDAO.getList());
 
-//        abstractDAO.delete(user2);
-//        System.out.println(abstractDAO.getList());
+        abstractDAO.delete(user2);
+        System.out.println(abstractDAO.getList());
 
         List<User> newList = new ArrayList<>();
         newList.add(user1);
