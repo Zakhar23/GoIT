@@ -6,6 +6,6 @@ public class UserDAO extends AbstractDAOImpl<User> {
     }
 
     public User get(long id) {
-        return listDB.stream().filter((p) -> p.getId() == id).findFirst().orElse(null);
+        return listDB.stream().filter(p -> p.getId() == id).findFirst().orElse(null);
     }
 }

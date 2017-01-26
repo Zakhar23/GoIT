@@ -3,7 +3,9 @@ package module7.homework;
 import module4.homework.first.Currency;
 
 import java.util.Comparator;
+import java.util.List;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 public class MainTreeSet {
     public static void main(String[] args) {
@@ -40,8 +42,9 @@ public class MainTreeSet {
         orders.removeIf(p -> p.getCurrency().equals(Currency.USD));
         orders.forEach(System.out::println);
         //or
-        //List<Order> listWithOurUSD = orders.stream().filter(p->p.getCurrency() != Currency.USD).collect(Collectors.toList());
-        //listWithOurUSD.forEach(System.out::println);
+        List<Order> listWithOurUSD = orders.stream()
+                .filter(p -> p.getCurrency() != Currency.USD).collect(Collectors.toList());
+        listWithOurUSD.forEach(System.out::println);
 
     }
 

@@ -1,7 +1,5 @@
 package module7.homework;
 
-import java.util.concurrent.ThreadPoolExecutor;
-
 public class User implements Comparable {
     private long id;
     private String firstName;
@@ -58,7 +56,7 @@ public class User implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Object obj) {
         return 0;
     }
 }
