@@ -20,8 +20,8 @@ public class Main {
         }
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(url.openStream()));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter
-                (new FileOutputStream("C:\\Users\\Home\\Desktop\\google.txt"), "UTF8"));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(
+            new FileOutputStream("C:\\Users\\Home\\Desktop\\google.txt"), "UTF8"));
 
         String line;
 
