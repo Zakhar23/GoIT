@@ -3,7 +3,7 @@ package module8.offline26122016;
 abstract public class Shape {
     private Point startPoint;
 
-    public Shape(Point startPoint) {
+    Shape(Point startPoint) {
         this.startPoint = startPoint;
     }
 

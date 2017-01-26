@@ -25,7 +25,7 @@ public class Main {
 
         }*/
 
-        try(Scanner scanner = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in)) {
             while (scanner.hasNext()) {
                 if (scanner.hasNextInt()) {
                     integerList.add(scanner.nextInt());
@@ -50,7 +50,6 @@ public class Main {
         System.out.println("=============== stringList");
         System.out.println(stringList);
     }
-
 
 
 }
