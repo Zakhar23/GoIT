@@ -2,8 +2,8 @@ package module7.homework;
 
 import module4.homework.first.Currency;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Comparator;
+import java.util.TreeSet;
 
 public class MainTreeSet {
     public static void main(String[] args) {
