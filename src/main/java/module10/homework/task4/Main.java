@@ -1,4 +1,4 @@
-package module10.homework.Task4;
+package module10.homework.task4;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class Main {
 
         try {
             classWithTwoMethods = new ClassWithTwoMethods();
-            classWithTwoMethods.f();
+            classWithTwoMethods.fff();
         } catch (ExeptionForF e) {
             System.out.println(e.getMessage());
         }

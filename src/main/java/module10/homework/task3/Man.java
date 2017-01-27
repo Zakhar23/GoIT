@@ -1,4 +1,4 @@
-package module10.homework.Task3;
+package module10.homework.task3;
 
 public class Man {
     String name;

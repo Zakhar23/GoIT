@@ -1,15 +1,15 @@
-package module10.homework.Task4;
+package module10.homework.task4;
 
 import module10.homework.task2.MyExeption;
 
 public class ClassWithTwoMethods {
-    public void g() throws MyExeption {
+    public void ggg() throws MyExeption {
         throw new MyExeption("it`s my exeption");
     }
 
-    public void f() throws ExeptionForF {
+    public void fff() throws ExeptionForF {
         try {
-            g();
+            ggg();
         } catch (MyExeption e) {
             throw new ExeptionForF("ExeptionForF");
         }
