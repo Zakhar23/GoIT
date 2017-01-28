@@ -14,14 +14,7 @@ public class Controller {
     List<Room> requstRooms(int price, int persons, String city, String hotel) {
         List<Room> foundRooms = new ArrayList<>();
         for (API item : apis) {
-            List<Room> rooms = item.findRooms(price, persons, city, hotel);
-            if (rooms.size() == 0) {
-                continue;
-            }
-
-            for (Room i : rooms) {
-                foundRooms.add(i);
-            }
+            foundRooms.addAll(item.findRooms(price, persons, city, hotel));
         }
         return foundRooms;
     }
