@@ -40,11 +40,10 @@ public class MainArrayList {
         orders = orders.stream().sorted(Comparator.comparingInt(Order::getPrice)).collect(Collectors.toList());
 
         //за ценой заказа по возрастанию и за городом пользователя
-        orders = orders.stream().sorted(((o1, o2) -> o1.getPrice() != o2.getPrice()
-                ? Integer.compare(o1.getPrice(), o2.getPrice())
-                : o1.getUser().getCity().compareTo(o2.getUser().getCity()))).collect(Collectors.toList());
+        orders = orders.stream().sorted(Comparator.comparingInt(Order::getPrice)
+                .thenComparing(Comparator.comparing(p -> p.getUser().getCity()))).collect(Collectors.toList());
 
-        //за наименованием и идентификатором заказа, и городом пользователя
+        //за наименованием, и идентификатором заказа, и городом пользователя
         orders = orders.stream().sorted(Comparator.comparing(Order::getItemName)
                 .thenComparing(Comparator.comparing(Order::getId))
                 .thenComparing(Comparator.comparing(p -> p.getUser().getCity()))).collect(Collectors.toList());
