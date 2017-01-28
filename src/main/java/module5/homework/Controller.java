@@ -1,6 +1,8 @@
 package module5.homework;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Controller {
     API[] apis = new API[3];
@@ -9,17 +11,16 @@ public class Controller {
         this.apis = apis;
     }
 
-    Room[] requstRooms(int price, int persons, String city, String hotel) {
-        Room[] foundRooms = new Room[0];
+    List<Room> requstRooms(int price, int persons, String city, String hotel) {
+        List<Room> foundRooms = new ArrayList<>();
         for (API item : apis) {
-            Room[] rooms = item.findRooms(price, persons, city, hotel);
-            if (rooms.length == 0) {
+            List<Room> rooms = item.findRooms(price, persons, city, hotel);
+            if (rooms.size() == 0) {
                 continue;
             }
 
             for (Room i : rooms) {
-                foundRooms = Arrays.copyOf(foundRooms, foundRooms.length + 1);
-                foundRooms[foundRooms.length - 1] = i;
+                foundRooms.add(i);
             }
         }
         return foundRooms;
